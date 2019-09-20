@@ -1,6 +1,11 @@
-#include <iostream>
-
+#include "Generate_Nums.hpp"
+#include "Reading_Nums.hpp"
 int main() {
-    std::cout << "Hello, World! :)" << std::endl;
-    return 0;
+
+int int_limit;
+int_limit= Num_Generation();
+Num_Reading(int_limit);
+
+return 0;
+
 }
