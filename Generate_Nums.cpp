@@ -10,13 +10,13 @@ int Num_Generation(){
     if(!ReadingFile.is_open()){
         cerr << "Unable to open file" << endl;
         exit(1);
-    }else{
-
     }
+
     // Upper and Lower value for index
     int int_lower = 512;
     int int_upper = 1024;
 
+    // get a random int between 512 and 1024
     random_device rd;
     mt19937 int_generator(time(NULL));
     uniform_int_distribution<> int_distribution (int_lower,int_upper);
@@ -36,6 +36,6 @@ int Num_Generation(){
         ReadingFile<< i << " "
         << fixed<<setprecision(3)<< random_double << endl;
     }
-
+    // return the total number of doubles
     return int_limit;
 }
